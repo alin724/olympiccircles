@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:49:17 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Tue Apr 21 16:27:07 2020
+# Process ID: 988
+# Current directory: C:/Users/Alin/Documents/digilent/OlympicCirclesBd1FF0PL1920/OlympicCirclesBd1FF0PL1920.runs/impl_1
+# Command line: vivado.exe -log olymp_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source olymp_wrapper.tcl -notrace
+# Log file: C:/Users/Alin/Documents/digilent/OlympicCirclesBd1FF0PL1920/OlympicCirclesBd1FF0PL1920.runs/impl_1/olymp_wrapper.vdi
+# Journal file: C:/Users/Alin/Documents/digilent/OlympicCirclesBd1FF0PL1920/OlympicCirclesBd1FF0PL1920.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source olymp_wrapper.tcl -notrace

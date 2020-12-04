@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="39">
+  <CompositeFile CompositeFileTopName="olymp" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1587477862"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1587477862"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1587477862"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1587477862"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="ip\olymp_ckVideoGen_0_0\olymp_ckVideoGen_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ckVideoGen_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1587470034" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\olymp_ctrlImgOlymp_0_0\olymp_ctrlImgOlymp_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ctrlImgOlymp_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1587470041" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\olymp_imgCombOlymp_0_0\olymp_imgCombOlymp_0_0.xci" Type="IP">
+        <Instance HierarchyPath="imgCombOlymp_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1586873953" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\olymp_vgaCtrl_0_0\olymp_vgaCtrl_0_0.xci" Type="IP">
+        <Instance HierarchyPath="vgaCtrl_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1587470044" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+    </FileCollection>
+  </CompositeFile>
+</Root>

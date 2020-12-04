@@ -1,0 +1,1520 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2.1 (win64) Build 2729669 Thu Dec  5 04:49:17 MST 2019
+| Date         : Tue Apr 21 16:28:22 2020
+| Host         : Alin-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : report_timing_summary -max_paths 10 -file olymp_wrapper_timing_summary_routed.rpt -pb olymp_wrapper_timing_summary_routed.pb -rpx olymp_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design       : olymp_wrapper
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 14 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      2.169        0.000                      0                   47        0.265        0.000                      0                   47        2.633        0.000                       0                    30  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock                   Waveform(ns)         Period(ns)      Frequency(MHz)
+-----                   ------------         ----------      --------------
+sys_clk_pin             {0.000 5.000}        10.000          100.000         
+  ckFbPll               {0.000 25.000}       50.000          20.000          
+  ckVideoGen_0_ckVideo  {0.000 3.365}        6.731           148.571         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                       WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                       -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin                                                                                                                                                               3.000        0.000                       0                     1  
+  ckFbPll                                                                                                                                                                 2.633        0.000                       0                     2  
+  ckVideoGen_0_ckVideo        2.169        0.000                      0                   47        0.265        0.000                      0                   47        2.865        0.000                       0                    27  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { ck100MHz }
+
+Check Type        Corner  Lib Pin           Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     PLLE2_ADV/CLKIN1  n/a            1.249         10.000      8.751      PLLE2_ADV_X1Y0  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKIN1
+Max Period        n/a     PLLE2_ADV/CLKIN1  n/a            52.633        10.000      42.633     PLLE2_ADV_X1Y0  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKIN1
+Low Pulse Width   Fast    PLLE2_ADV/CLKIN1  n/a            2.000         5.000       3.000      PLLE2_ADV_X1Y0  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKIN1
+Low Pulse Width   Slow    PLLE2_ADV/CLKIN1  n/a            2.000         5.000       3.000      PLLE2_ADV_X1Y0  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKIN1
+High Pulse Width  Slow    PLLE2_ADV/CLKIN1  n/a            2.000         5.000       3.000      PLLE2_ADV_X1Y0  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKIN1
+High Pulse Width  Fast    PLLE2_ADV/CLKIN1  n/a            2.000         5.000       3.000      PLLE2_ADV_X1Y0  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  ckFbPll
+  To Clock:  ckFbPll
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        2.633ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         ckFbPll
+Waveform(ns):       { 0.000 25.000 }
+Period(ns):         50.000
+Sources:            { olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period  n/a     PLLE2_ADV/CLKFBOUT  n/a            1.249         50.000      48.751     PLLE2_ADV_X1Y0  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKFBOUT
+Min Period  n/a     PLLE2_ADV/CLKFBIN   n/a            1.249         50.000      48.751     PLLE2_ADV_X1Y0  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKFBIN
+Max Period  n/a     PLLE2_ADV/CLKFBIN   n/a            52.633        50.000      2.633      PLLE2_ADV_X1Y0  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKFBIN
+Max Period  n/a     PLLE2_ADV/CLKFBOUT  n/a            160.000       50.000      110.000    PLLE2_ADV_X1Y0  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKFBOUT
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  ckVideoGen_0_ckVideo
+  To Clock:  ckVideoGen_0_ckVideo
+
+Setup :            0  Failing Endpoints,  Worst Slack        2.169ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.265ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        2.865ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             2.169ns  (required time - arrival time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntVScreen_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntVScreen_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.731ns  (ckVideoGen_0_ckVideo rise@6.731ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        4.200ns  (logic 1.277ns (30.402%)  route 2.923ns (69.598%))
+  Logic Levels:           3  (LUT2=1 LUT4=1 LUT5=1)
+  Clock Path Skew:        0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.831ns = ( 12.562 - 6.731 ) 
+    Source Clock Delay      (SCD):    6.116ns
+    Clock Pessimism Removal (CPR):    0.312ns
+  Clock Uncertainty:      0.114ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.216ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.253     2.711    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.799 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.655     4.455    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.551 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.565     6.116    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X10Y12         FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y12         FDRE (Prop_fdre_C_Q)         0.478     6.594 r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[4]/Q
+                         net (fo=14, routed)          1.138     7.732    olymp_i/vgaCtrl_0/inst/Q[4]
+    SLICE_X7Y13          LUT4 (Prop_lut4_I1_O)        0.295     8.027 r  olymp_i/vgaCtrl_0/inst/vgaVsync_i_5/O
+                         net (fo=2, routed)           0.433     8.460    olymp_i/vgaCtrl_0/inst/vgaVsync_i_5_n_0
+    SLICE_X7Y13          LUT5 (Prop_lut5_I4_O)        0.150     8.610 r  olymp_i/vgaCtrl_0/inst/cntVScreen[6]_i_2/O
+                         net (fo=3, routed)           0.878     9.488    olymp_i/vgaCtrl_0/inst/cntVScreen[6]_i_2_n_0
+    SLICE_X7Y13          LUT2 (Prop_lut2_I0_O)        0.354     9.842 r  olymp_i/vgaCtrl_0/inst/cntVScreen[0]_i_1/O
+                         net (fo=1, routed)           0.475    10.317    olymp_i/vgaCtrl_0/inst/cntVScreen[0]
+    SLICE_X7Y13          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      6.731     6.731 r  
+    W5                                                0.000     6.731 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     6.731    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     8.119 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.181     9.300    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     9.383 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.576    10.959    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    11.050 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.512    12.562    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X7Y13          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[0]/C
+                         clock pessimism              0.312    12.874    
+                         clock uncertainty           -0.114    12.760    
+    SLICE_X7Y13          FDRE (Setup_fdre_C_D)       -0.275    12.485    olymp_i/vgaCtrl_0/inst/cntVScreen_reg[0]
+  -------------------------------------------------------------------
+                         required time                         12.485    
+                         arrival time                         -10.317    
+  -------------------------------------------------------------------
+                         slack                                  2.169    
+
+Slack (MET) :             2.335ns  (required time - arrival time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntHScreen_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/vgaHsyncInt_reg/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.731ns  (ckVideoGen_0_ckVideo rise@6.731ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        4.334ns  (logic 0.890ns (20.536%)  route 3.444ns (79.464%))
+  Logic Levels:           3  (LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.830ns = ( 12.561 - 6.731 ) 
+    Source Clock Delay      (SCD):    6.119ns
+    Clock Pessimism Removal (CPR):    0.312ns
+  Clock Uncertainty:      0.114ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.216ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.253     2.711    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.799 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.655     4.455    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.551 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.568     6.119    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X14Y8          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y8          FDRE (Prop_fdre_C_Q)         0.518     6.637 r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[0]/Q
+                         net (fo=45, routed)          1.734     8.371    olymp_i/vgaCtrl_0/inst/cntHScreen_reg[0]_0[0]
+    SLICE_X14Y8          LUT4 (Prop_lut4_I2_O)        0.124     8.495 r  olymp_i/vgaCtrl_0/inst/vgaHsyncInt_i_3/O
+                         net (fo=1, routed)           0.286     8.781    olymp_i/vgaCtrl_0/inst/vgaHsyncInt_i_3_n_0
+    SLICE_X14Y8          LUT6 (Prop_lut6_I0_O)        0.124     8.905 r  olymp_i/vgaCtrl_0/inst/vgaHsyncInt_i_2/O
+                         net (fo=1, routed)           1.424    10.329    olymp_i/vgaCtrl_0/inst/vgaHsyncInt
+    SLICE_X7Y15          LUT3 (Prop_lut3_I1_O)        0.124    10.453 r  olymp_i/vgaCtrl_0/inst/vgaHsyncInt_i_1/O
+                         net (fo=1, routed)           0.000    10.453    olymp_i/vgaCtrl_0/inst/vgaHsyncInt_i_1_n_0
+    SLICE_X7Y15          FDRE                                         r  olymp_i/vgaCtrl_0/inst/vgaHsyncInt_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      6.731     6.731 r  
+    W5                                                0.000     6.731 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     6.731    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     8.119 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.181     9.300    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     9.383 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.576    10.959    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    11.050 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.511    12.561    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X7Y15          FDRE                                         r  olymp_i/vgaCtrl_0/inst/vgaHsyncInt_reg/C
+                         clock pessimism              0.312    12.873    
+                         clock uncertainty           -0.114    12.759    
+    SLICE_X7Y15          FDRE (Setup_fdre_C_D)        0.029    12.788    olymp_i/vgaCtrl_0/inst/vgaHsyncInt_reg
+  -------------------------------------------------------------------
+                         required time                         12.788    
+                         arrival time                         -10.453    
+  -------------------------------------------------------------------
+                         slack                                  2.335    
+
+Slack (MET) :             2.750ns  (required time - arrival time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntVScreen_reg[6]/CE
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.731ns  (ckVideoGen_0_ckVideo rise@6.731ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        3.721ns  (logic 0.704ns (18.917%)  route 3.017ns (81.083%))
+  Logic Levels:           2  (LUT6=2)
+  Clock Path Skew:        0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.831ns = ( 12.562 - 6.731 ) 
+    Source Clock Delay      (SCD):    6.120ns
+    Clock Pessimism Removal (CPR):    0.312ns
+  Clock Uncertainty:      0.114ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.216ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.253     2.711    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.799 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.655     4.455    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.551 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.569     6.120    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X15Y6          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y6          FDRE (Prop_fdre_C_Q)         0.456     6.576 f  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/Q
+                         net (fo=11, routed)          0.913     7.489    olymp_i/vgaCtrl_0/inst/adrHScreen[2]
+    SLICE_X14Y6          LUT6 (Prop_lut6_I0_O)        0.124     7.613 r  olymp_i/vgaCtrl_0/inst/cntHScreen[11]_i_3/O
+                         net (fo=2, routed)           0.670     8.283    olymp_i/vgaCtrl_0/inst/cntHScreen[11]_i_3_n_0
+    SLICE_X14Y7          LUT6 (Prop_lut6_I0_O)        0.124     8.407 r  olymp_i/vgaCtrl_0/inst/cntVScreen[10]_i_1/O
+                         net (fo=13, routed)          1.434     9.842    olymp_i/vgaCtrl_0/inst/cntVScreen[10]_i_1_n_0
+    SLICE_X6Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[6]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      6.731     6.731 r  
+    W5                                                0.000     6.731 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     6.731    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     8.119 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.181     9.300    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     9.383 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.576    10.959    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    11.050 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.512    12.562    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X6Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[6]/C
+                         clock pessimism              0.312    12.874    
+                         clock uncertainty           -0.114    12.760    
+    SLICE_X6Y14          FDRE (Setup_fdre_C_CE)      -0.169    12.591    olymp_i/vgaCtrl_0/inst/cntVScreen_reg[6]
+  -------------------------------------------------------------------
+                         required time                         12.591    
+                         arrival time                          -9.842    
+  -------------------------------------------------------------------
+                         slack                                  2.750    
+
+Slack (MET) :             2.750ns  (required time - arrival time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntVScreen_reg[7]/CE
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.731ns  (ckVideoGen_0_ckVideo rise@6.731ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        3.721ns  (logic 0.704ns (18.917%)  route 3.017ns (81.083%))
+  Logic Levels:           2  (LUT6=2)
+  Clock Path Skew:        0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.831ns = ( 12.562 - 6.731 ) 
+    Source Clock Delay      (SCD):    6.120ns
+    Clock Pessimism Removal (CPR):    0.312ns
+  Clock Uncertainty:      0.114ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.216ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.253     2.711    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.799 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.655     4.455    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.551 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.569     6.120    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X15Y6          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y6          FDRE (Prop_fdre_C_Q)         0.456     6.576 f  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/Q
+                         net (fo=11, routed)          0.913     7.489    olymp_i/vgaCtrl_0/inst/adrHScreen[2]
+    SLICE_X14Y6          LUT6 (Prop_lut6_I0_O)        0.124     7.613 r  olymp_i/vgaCtrl_0/inst/cntHScreen[11]_i_3/O
+                         net (fo=2, routed)           0.670     8.283    olymp_i/vgaCtrl_0/inst/cntHScreen[11]_i_3_n_0
+    SLICE_X14Y7          LUT6 (Prop_lut6_I0_O)        0.124     8.407 r  olymp_i/vgaCtrl_0/inst/cntVScreen[10]_i_1/O
+                         net (fo=13, routed)          1.434     9.842    olymp_i/vgaCtrl_0/inst/cntVScreen[10]_i_1_n_0
+    SLICE_X6Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[7]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      6.731     6.731 r  
+    W5                                                0.000     6.731 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     6.731    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     8.119 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.181     9.300    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     9.383 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.576    10.959    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    11.050 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.512    12.562    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X6Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[7]/C
+                         clock pessimism              0.312    12.874    
+                         clock uncertainty           -0.114    12.760    
+    SLICE_X6Y14          FDRE (Setup_fdre_C_CE)      -0.169    12.591    olymp_i/vgaCtrl_0/inst/cntVScreen_reg[7]
+  -------------------------------------------------------------------
+                         required time                         12.591    
+                         arrival time                          -9.842    
+  -------------------------------------------------------------------
+                         slack                                  2.750    
+
+Slack (MET) :             2.754ns  (required time - arrival time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntVScreen_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntVScreen_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.731ns  (ckVideoGen_0_ckVideo rise@6.731ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        3.521ns  (logic 0.732ns (20.787%)  route 2.789ns (79.213%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.102ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.767ns = ( 12.498 - 6.731 ) 
+    Source Clock Delay      (SCD):    6.181ns
+    Clock Pessimism Removal (CPR):    0.312ns
+  Clock Uncertainty:      0.114ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.216ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.253     2.711    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.799 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.655     4.455    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.551 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.630     6.181    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X7Y13          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y13          FDRE (Prop_fdre_C_Q)         0.456     6.637 f  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[0]/Q
+                         net (fo=21, routed)          1.394     8.031    olymp_i/vgaCtrl_0/inst/Q[0]
+    SLICE_X8Y9           LUT6 (Prop_lut6_I5_O)        0.124     8.155 r  olymp_i/vgaCtrl_0/inst/cntVScreen[9]_i_2/O
+                         net (fo=2, routed)           1.059     9.215    olymp_i/vgaCtrl_0/inst/cntVScreen[9]_i_2_n_0
+    SLICE_X8Y9           LUT5 (Prop_lut5_I2_O)        0.152     9.367 r  olymp_i/vgaCtrl_0/inst/cntVScreen[9]_i_1/O
+                         net (fo=1, routed)           0.336     9.703    olymp_i/vgaCtrl_0/inst/cntVScreen[9]
+    SLICE_X8Y9           FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      6.731     6.731 r  
+    W5                                                0.000     6.731 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     6.731    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     8.119 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.181     9.300    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     9.383 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.576    10.959    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    11.050 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.448    12.498    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X8Y9           FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[9]/C
+                         clock pessimism              0.312    12.810    
+                         clock uncertainty           -0.114    12.696    
+    SLICE_X8Y9           FDRE (Setup_fdre_C_D)       -0.240    12.456    olymp_i/vgaCtrl_0/inst/cntVScreen_reg[9]
+  -------------------------------------------------------------------
+                         required time                         12.456    
+                         arrival time                          -9.703    
+  -------------------------------------------------------------------
+                         slack                                  2.754    
+
+Slack (MET) :             2.784ns  (required time - arrival time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntVScreen_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntVScreen_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.731ns  (ckVideoGen_0_ckVideo rise@6.731ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        3.568ns  (logic 0.733ns (20.545%)  route 2.835ns (79.455%))
+  Logic Levels:           2  (LUT3=1 LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.831ns = ( 12.562 - 6.731 ) 
+    Source Clock Delay      (SCD):    6.181ns
+    Clock Pessimism Removal (CPR):    0.350ns
+  Clock Uncertainty:      0.114ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.216ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.253     2.711    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.799 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.655     4.455    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.551 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.630     6.181    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X7Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y14          FDRE (Prop_fdre_C_Q)         0.456     6.637 f  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[2]/Q
+                         net (fo=13, routed)          1.444     8.082    olymp_i/vgaCtrl_0/inst/Q[2]
+    SLICE_X7Y14          LUT3 (Prop_lut3_I2_O)        0.124     8.206 r  olymp_i/vgaCtrl_0/inst/cntVScreen[7]_i_2/O
+                         net (fo=4, routed)           0.867     9.072    olymp_i/vgaCtrl_0/inst/cntVScreen[7]_i_2_n_0
+    SLICE_X7Y14          LUT5 (Prop_lut5_I3_O)        0.153     9.225 r  olymp_i/vgaCtrl_0/inst/cntVScreen[5]_i_1/O
+                         net (fo=1, routed)           0.524     9.749    olymp_i/vgaCtrl_0/inst/cntVScreen[5]
+    SLICE_X7Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      6.731     6.731 r  
+    W5                                                0.000     6.731 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     6.731    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     8.119 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.181     9.300    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     9.383 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.576    10.959    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    11.050 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.512    12.562    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X7Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[5]/C
+                         clock pessimism              0.350    12.912    
+                         clock uncertainty           -0.114    12.798    
+    SLICE_X7Y14          FDRE (Setup_fdre_C_D)       -0.265    12.533    olymp_i/vgaCtrl_0/inst/cntVScreen_reg[5]
+  -------------------------------------------------------------------
+                         required time                         12.533    
+                         arrival time                          -9.749    
+  -------------------------------------------------------------------
+                         slack                                  2.784    
+
+Slack (MET) :             2.896ns  (required time - arrival time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntVScreen_reg[10]/CE
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.731ns  (ckVideoGen_0_ckVideo rise@6.731ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        3.539ns  (logic 0.704ns (19.893%)  route 2.835ns (80.107%))
+  Logic Levels:           2  (LUT6=2)
+  Clock Path Skew:        0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.831ns = ( 12.562 - 6.731 ) 
+    Source Clock Delay      (SCD):    6.120ns
+    Clock Pessimism Removal (CPR):    0.312ns
+  Clock Uncertainty:      0.114ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.216ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.253     2.711    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.799 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.655     4.455    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.551 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.569     6.120    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X15Y6          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y6          FDRE (Prop_fdre_C_Q)         0.456     6.576 f  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/Q
+                         net (fo=11, routed)          0.913     7.489    olymp_i/vgaCtrl_0/inst/adrHScreen[2]
+    SLICE_X14Y6          LUT6 (Prop_lut6_I0_O)        0.124     7.613 r  olymp_i/vgaCtrl_0/inst/cntHScreen[11]_i_3/O
+                         net (fo=2, routed)           0.670     8.283    olymp_i/vgaCtrl_0/inst/cntHScreen[11]_i_3_n_0
+    SLICE_X14Y7          LUT6 (Prop_lut6_I0_O)        0.124     8.407 r  olymp_i/vgaCtrl_0/inst/cntVScreen[10]_i_1/O
+                         net (fo=13, routed)          1.252     9.659    olymp_i/vgaCtrl_0/inst/cntVScreen[10]_i_1_n_0
+    SLICE_X7Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[10]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      6.731     6.731 r  
+    W5                                                0.000     6.731 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     6.731    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     8.119 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.181     9.300    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     9.383 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.576    10.959    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    11.050 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.512    12.562    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X7Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[10]/C
+                         clock pessimism              0.312    12.874    
+                         clock uncertainty           -0.114    12.760    
+    SLICE_X7Y14          FDRE (Setup_fdre_C_CE)      -0.205    12.555    olymp_i/vgaCtrl_0/inst/cntVScreen_reg[10]
+  -------------------------------------------------------------------
+                         required time                         12.555    
+                         arrival time                          -9.659    
+  -------------------------------------------------------------------
+                         slack                                  2.896    
+
+Slack (MET) :             2.896ns  (required time - arrival time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntVScreen_reg[2]/CE
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.731ns  (ckVideoGen_0_ckVideo rise@6.731ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        3.539ns  (logic 0.704ns (19.893%)  route 2.835ns (80.107%))
+  Logic Levels:           2  (LUT6=2)
+  Clock Path Skew:        0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.831ns = ( 12.562 - 6.731 ) 
+    Source Clock Delay      (SCD):    6.120ns
+    Clock Pessimism Removal (CPR):    0.312ns
+  Clock Uncertainty:      0.114ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.216ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.253     2.711    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.799 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.655     4.455    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.551 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.569     6.120    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X15Y6          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y6          FDRE (Prop_fdre_C_Q)         0.456     6.576 f  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/Q
+                         net (fo=11, routed)          0.913     7.489    olymp_i/vgaCtrl_0/inst/adrHScreen[2]
+    SLICE_X14Y6          LUT6 (Prop_lut6_I0_O)        0.124     7.613 r  olymp_i/vgaCtrl_0/inst/cntHScreen[11]_i_3/O
+                         net (fo=2, routed)           0.670     8.283    olymp_i/vgaCtrl_0/inst/cntHScreen[11]_i_3_n_0
+    SLICE_X14Y7          LUT6 (Prop_lut6_I0_O)        0.124     8.407 r  olymp_i/vgaCtrl_0/inst/cntVScreen[10]_i_1/O
+                         net (fo=13, routed)          1.252     9.659    olymp_i/vgaCtrl_0/inst/cntVScreen[10]_i_1_n_0
+    SLICE_X7Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[2]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      6.731     6.731 r  
+    W5                                                0.000     6.731 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     6.731    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     8.119 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.181     9.300    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     9.383 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.576    10.959    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    11.050 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.512    12.562    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X7Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[2]/C
+                         clock pessimism              0.312    12.874    
+                         clock uncertainty           -0.114    12.760    
+    SLICE_X7Y14          FDRE (Setup_fdre_C_CE)      -0.205    12.555    olymp_i/vgaCtrl_0/inst/cntVScreen_reg[2]
+  -------------------------------------------------------------------
+                         required time                         12.555    
+                         arrival time                          -9.659    
+  -------------------------------------------------------------------
+                         slack                                  2.896    
+
+Slack (MET) :             2.896ns  (required time - arrival time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntVScreen_reg[5]/CE
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.731ns  (ckVideoGen_0_ckVideo rise@6.731ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        3.539ns  (logic 0.704ns (19.893%)  route 2.835ns (80.107%))
+  Logic Levels:           2  (LUT6=2)
+  Clock Path Skew:        0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.831ns = ( 12.562 - 6.731 ) 
+    Source Clock Delay      (SCD):    6.120ns
+    Clock Pessimism Removal (CPR):    0.312ns
+  Clock Uncertainty:      0.114ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.216ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.253     2.711    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.799 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.655     4.455    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.551 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.569     6.120    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X15Y6          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y6          FDRE (Prop_fdre_C_Q)         0.456     6.576 f  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/Q
+                         net (fo=11, routed)          0.913     7.489    olymp_i/vgaCtrl_0/inst/adrHScreen[2]
+    SLICE_X14Y6          LUT6 (Prop_lut6_I0_O)        0.124     7.613 r  olymp_i/vgaCtrl_0/inst/cntHScreen[11]_i_3/O
+                         net (fo=2, routed)           0.670     8.283    olymp_i/vgaCtrl_0/inst/cntHScreen[11]_i_3_n_0
+    SLICE_X14Y7          LUT6 (Prop_lut6_I0_O)        0.124     8.407 r  olymp_i/vgaCtrl_0/inst/cntVScreen[10]_i_1/O
+                         net (fo=13, routed)          1.252     9.659    olymp_i/vgaCtrl_0/inst/cntVScreen[10]_i_1_n_0
+    SLICE_X7Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[5]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      6.731     6.731 r  
+    W5                                                0.000     6.731 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     6.731    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     8.119 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.181     9.300    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     9.383 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.576    10.959    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    11.050 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.512    12.562    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X7Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[5]/C
+                         clock pessimism              0.312    12.874    
+                         clock uncertainty           -0.114    12.760    
+    SLICE_X7Y14          FDRE (Setup_fdre_C_CE)      -0.205    12.555    olymp_i/vgaCtrl_0/inst/cntVScreen_reg[5]
+  -------------------------------------------------------------------
+                         required time                         12.555    
+                         arrival time                          -9.659    
+  -------------------------------------------------------------------
+                         slack                                  2.896    
+
+Slack (MET) :             2.942ns  (required time - arrival time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/vgaVsync_reg/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.731ns  (ckVideoGen_0_ckVideo rise@6.731ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        3.775ns  (logic 0.828ns (21.932%)  route 2.947ns (78.068%))
+  Logic Levels:           3  (LUT4=1 LUT6=2)
+  Clock Path Skew:        0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.831ns = ( 12.562 - 6.731 ) 
+    Source Clock Delay      (SCD):    6.120ns
+    Clock Pessimism Removal (CPR):    0.312ns
+  Clock Uncertainty:      0.114ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.216ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.253     2.711    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.799 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.655     4.455    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.551 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.569     6.120    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X15Y6          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y6          FDRE (Prop_fdre_C_Q)         0.456     6.576 f  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/Q
+                         net (fo=11, routed)          0.913     7.489    olymp_i/vgaCtrl_0/inst/adrHScreen[2]
+    SLICE_X14Y6          LUT6 (Prop_lut6_I0_O)        0.124     7.613 r  olymp_i/vgaCtrl_0/inst/cntHScreen[11]_i_3/O
+                         net (fo=2, routed)           0.670     8.283    olymp_i/vgaCtrl_0/inst/cntHScreen[11]_i_3_n_0
+    SLICE_X14Y7          LUT6 (Prop_lut6_I0_O)        0.124     8.407 r  olymp_i/vgaCtrl_0/inst/cntVScreen[10]_i_1/O
+                         net (fo=13, routed)          1.364     9.772    olymp_i/vgaCtrl_0/inst/cntVScreen[10]_i_1_n_0
+    SLICE_X6Y13          LUT4 (Prop_lut4_I3_O)        0.124     9.896 r  olymp_i/vgaCtrl_0/inst/vgaVsync_i_1/O
+                         net (fo=1, routed)           0.000     9.896    olymp_i/vgaCtrl_0/inst/vgaVsync_i_1_n_0
+    SLICE_X6Y13          FDRE                                         r  olymp_i/vgaCtrl_0/inst/vgaVsync_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      6.731     6.731 r  
+    W5                                                0.000     6.731 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     6.731    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     8.119 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.181     9.300    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     9.383 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           1.576    10.959    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    11.050 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          1.512    12.562    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X6Y13          FDRE                                         r  olymp_i/vgaCtrl_0/inst/vgaVsync_reg/C
+                         clock pessimism              0.312    12.874    
+                         clock uncertainty           -0.114    12.760    
+    SLICE_X6Y13          FDRE (Setup_fdre_C_D)        0.077    12.837    olymp_i/vgaCtrl_0/inst/vgaVsync_reg
+  -------------------------------------------------------------------
+                         required time                         12.837    
+                         arrival time                          -9.896    
+  -------------------------------------------------------------------
+                         slack                                  2.942    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.265ns  (arrival time - required time)
+  Source:                 olymp_i/vgaCtrl_0/inst/vgaHsyncInt_reg/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/vgaHsyncInt_reg/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ckVideoGen_0_ckVideo rise@0.000ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        0.356ns  (logic 0.186ns (52.178%)  route 0.170ns (47.822%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.380ns
+    Source Clock Delay      (SCD):    1.832ns
+    Clock Pessimism Removal (CPR):    0.548ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.501     1.218    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.244 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.589     1.832    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X7Y15          FDRE                                         r  olymp_i/vgaCtrl_0/inst/vgaHsyncInt_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y15          FDRE (Prop_fdre_C_Q)         0.141     1.973 r  olymp_i/vgaCtrl_0/inst/vgaHsyncInt_reg/Q
+                         net (fo=2, routed)           0.170     2.144    olymp_i/vgaCtrl_0/inst/vgaHsync
+    SLICE_X7Y15          LUT3 (Prop_lut3_I0_O)        0.045     2.189 r  olymp_i/vgaCtrl_0/inst/vgaHsyncInt_i_1/O
+                         net (fo=1, routed)           0.000     2.189    olymp_i/vgaCtrl_0/inst/vgaHsyncInt_i_1_n_0
+    SLICE_X7Y15          FDRE                                         r  olymp_i/vgaCtrl_0/inst/vgaHsyncInt_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.481     0.895    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.948 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.546     1.494    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.523 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.858     2.380    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X7Y15          FDRE                                         r  olymp_i/vgaCtrl_0/inst/vgaHsyncInt_reg/C
+                         clock pessimism             -0.548     1.832    
+    SLICE_X7Y15          FDRE (Hold_fdre_C_D)         0.091     1.923    olymp_i/vgaCtrl_0/inst/vgaHsyncInt_reg
+  -------------------------------------------------------------------
+                         required time                         -1.923    
+                         arrival time                           2.189    
+  -------------------------------------------------------------------
+                         slack                                  0.265    
+
+Slack (MET) :             0.268ns  (arrival time - required time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntVScreen_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntVScreen_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ckVideoGen_0_ckVideo rise@0.000ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        0.434ns  (logic 0.187ns (43.049%)  route 0.247ns (56.951%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.035ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.354ns
+    Source Clock Delay      (SCD):    1.806ns
+    Clock Pessimism Removal (CPR):    0.513ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.501     1.218    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.244 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.563     1.806    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X9Y12          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y12          FDRE (Prop_fdre_C_Q)         0.141     1.947 r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[1]/Q
+                         net (fo=12, routed)          0.247     2.195    olymp_i/vgaCtrl_0/inst/Q[1]
+    SLICE_X10Y12         LUT5 (Prop_lut5_I1_O)        0.046     2.241 r  olymp_i/vgaCtrl_0/inst/cntVScreen[4]_i_1/O
+                         net (fo=1, routed)           0.000     2.241    olymp_i/vgaCtrl_0/inst/cntVScreen[4]
+    SLICE_X10Y12         FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.481     0.895    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.948 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.546     1.494    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.523 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.832     2.354    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X10Y12         FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[4]/C
+                         clock pessimism             -0.513     1.841    
+    SLICE_X10Y12         FDRE (Hold_fdre_C_D)         0.131     1.972    olymp_i/vgaCtrl_0/inst/cntVScreen_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.972    
+                         arrival time                           2.241    
+  -------------------------------------------------------------------
+                         slack                                  0.268    
+
+Slack (MET) :             0.271ns  (arrival time - required time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntVScreen_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntVScreen_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ckVideoGen_0_ckVideo rise@0.000ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        0.376ns  (logic 0.183ns (48.726%)  route 0.193ns (51.274%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.354ns
+    Source Clock Delay      (SCD):    1.806ns
+    Clock Pessimism Removal (CPR):    0.548ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.501     1.218    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.244 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.563     1.806    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X9Y12          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y12          FDRE (Prop_fdre_C_Q)         0.141     1.947 r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[1]/Q
+                         net (fo=12, routed)          0.193     2.140    olymp_i/vgaCtrl_0/inst/Q[1]
+    SLICE_X9Y12          LUT2 (Prop_lut2_I0_O)        0.042     2.182 r  olymp_i/vgaCtrl_0/inst/cntVScreen[1]_i_1/O
+                         net (fo=1, routed)           0.000     2.182    olymp_i/vgaCtrl_0/inst/cntVScreen[1]
+    SLICE_X9Y12          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.481     0.895    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.948 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.546     1.494    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.523 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.832     2.354    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X9Y12          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[1]/C
+                         clock pessimism             -0.548     1.806    
+    SLICE_X9Y12          FDRE (Hold_fdre_C_D)         0.105     1.911    olymp_i/vgaCtrl_0/inst/cntVScreen_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.911    
+                         arrival time                           2.182    
+  -------------------------------------------------------------------
+                         slack                                  0.271    
+
+Slack (MET) :             0.278ns  (arrival time - required time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntVScreen_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntVScreen_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ckVideoGen_0_ckVideo rise@0.000ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        0.433ns  (logic 0.186ns (42.917%)  route 0.247ns (57.083%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.035ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.354ns
+    Source Clock Delay      (SCD):    1.806ns
+    Clock Pessimism Removal (CPR):    0.513ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.501     1.218    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.244 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.563     1.806    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X9Y12          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y12          FDRE (Prop_fdre_C_Q)         0.141     1.947 r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[1]/Q
+                         net (fo=12, routed)          0.247     2.195    olymp_i/vgaCtrl_0/inst/Q[1]
+    SLICE_X10Y12         LUT4 (Prop_lut4_I2_O)        0.045     2.240 r  olymp_i/vgaCtrl_0/inst/cntVScreen[3]_i_1/O
+                         net (fo=1, routed)           0.000     2.240    olymp_i/vgaCtrl_0/inst/cntVScreen[3]_i_1_n_0
+    SLICE_X10Y12         FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.481     0.895    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.948 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.546     1.494    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.523 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.832     2.354    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X10Y12         FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[3]/C
+                         clock pessimism             -0.513     1.841    
+    SLICE_X10Y12         FDRE (Hold_fdre_C_D)         0.120     1.961    olymp_i/vgaCtrl_0/inst/cntVScreen_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.961    
+                         arrival time                           2.240    
+  -------------------------------------------------------------------
+                         slack                                  0.278    
+
+Slack (MET) :             0.283ns  (arrival time - required time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntVScreen_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntVScreen_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ckVideoGen_0_ckVideo rise@0.000ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        0.403ns  (logic 0.209ns (51.823%)  route 0.194ns (48.177%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.381ns
+    Source Clock Delay      (SCD):    1.832ns
+    Clock Pessimism Removal (CPR):    0.549ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.501     1.218    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.244 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.589     1.832    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X6Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y14          FDRE (Prop_fdre_C_Q)         0.164     1.996 r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[6]/Q
+                         net (fo=10, routed)          0.194     2.190    olymp_i/vgaCtrl_0/inst/Q[6]
+    SLICE_X6Y14          LUT6 (Prop_lut6_I5_O)        0.045     2.235 r  olymp_i/vgaCtrl_0/inst/cntVScreen[7]_i_1/O
+                         net (fo=1, routed)           0.000     2.235    olymp_i/vgaCtrl_0/inst/cntVScreen[7]
+    SLICE_X6Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.481     0.895    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.948 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.546     1.494    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.523 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.859     2.381    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X6Y14          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[7]/C
+                         clock pessimism             -0.549     1.832    
+    SLICE_X6Y14          FDRE (Hold_fdre_C_D)         0.120     1.952    olymp_i/vgaCtrl_0/inst/cntVScreen_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -1.952    
+                         arrival time                           2.235    
+  -------------------------------------------------------------------
+                         slack                                  0.283    
+
+Slack (MET) :             0.288ns  (arrival time - required time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntVScreen_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntVScreen_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ckVideoGen_0_ckVideo rise@0.000ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        0.408ns  (logic 0.209ns (51.283%)  route 0.199ns (48.717%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.357ns
+    Source Clock Delay      (SCD):    1.808ns
+    Clock Pessimism Removal (CPR):    0.549ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.501     1.218    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.244 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.565     1.808    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X8Y9           FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y9           FDRE (Prop_fdre_C_Q)         0.164     1.972 r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[8]/Q
+                         net (fo=9, routed)           0.199     2.171    olymp_i/vgaCtrl_0/inst/Q[8]
+    SLICE_X8Y9           LUT4 (Prop_lut4_I0_O)        0.045     2.216 r  olymp_i/vgaCtrl_0/inst/cntVScreen[8]_i_1/O
+                         net (fo=1, routed)           0.000     2.216    olymp_i/vgaCtrl_0/inst/cntVScreen[8]
+    SLICE_X8Y9           FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.481     0.895    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.948 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.546     1.494    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.523 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.835     2.357    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X8Y9           FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntVScreen_reg[8]/C
+                         clock pessimism             -0.549     1.808    
+    SLICE_X8Y9           FDRE (Hold_fdre_C_D)         0.120     1.928    olymp_i/vgaCtrl_0/inst/cntVScreen_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -1.928    
+                         arrival time                           2.216    
+  -------------------------------------------------------------------
+                         slack                                  0.288    
+
+Slack (MET) :             0.295ns  (arrival time - required time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntHScreen_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntHScreen_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ckVideoGen_0_ckVideo rise@0.000ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        0.400ns  (logic 0.252ns (62.988%)  route 0.148ns (37.012%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.357ns
+    Source Clock Delay      (SCD):    1.808ns
+    Clock Pessimism Removal (CPR):    0.549ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.501     1.218    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.244 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.565     1.808    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X15Y8          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y8          FDRE (Prop_fdre_C_Q)         0.141     1.949 r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[11]/Q
+                         net (fo=15, routed)          0.148     2.097    olymp_i/vgaCtrl_0/inst/cntHScreen_reg[11]_0
+    SLICE_X15Y8          CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     2.208 r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[11]_i_2/O[2]
+                         net (fo=1, routed)           0.000     2.208    olymp_i/vgaCtrl_0/inst/data0[11]
+    SLICE_X15Y8          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.481     0.895    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.948 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.546     1.494    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.523 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.835     2.357    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X15Y8          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[11]/C
+                         clock pessimism             -0.549     1.808    
+    SLICE_X15Y8          FDRE (Hold_fdre_C_D)         0.105     1.913    olymp_i/vgaCtrl_0/inst/cntHScreen_reg[11]
+  -------------------------------------------------------------------
+                         required time                         -1.913    
+                         arrival time                           2.208    
+  -------------------------------------------------------------------
+                         slack                                  0.295    
+
+Slack (MET) :             0.298ns  (arrival time - required time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntHScreen_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntHScreen_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ckVideoGen_0_ckVideo rise@0.000ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        0.403ns  (logic 0.249ns (61.789%)  route 0.154ns (38.211%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.357ns
+    Source Clock Delay      (SCD):    1.808ns
+    Clock Pessimism Removal (CPR):    0.549ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.501     1.218    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.244 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.565     1.808    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X15Y7          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y7          FDRE (Prop_fdre_C_Q)         0.141     1.949 r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[8]/Q
+                         net (fo=13, routed)          0.154     2.103    olymp_i/vgaCtrl_0/inst/cntHScreen_reg[8]_0
+    SLICE_X15Y7          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     2.211 r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[8]_i_1/O[3]
+                         net (fo=1, routed)           0.000     2.211    olymp_i/vgaCtrl_0/inst/data0[8]
+    SLICE_X15Y7          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.481     0.895    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.948 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.546     1.494    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.523 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.835     2.357    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X15Y7          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[8]/C
+                         clock pessimism             -0.549     1.808    
+    SLICE_X15Y7          FDRE (Hold_fdre_C_D)         0.105     1.913    olymp_i/vgaCtrl_0/inst/cntHScreen_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -1.913    
+                         arrival time                           2.211    
+  -------------------------------------------------------------------
+                         slack                                  0.298    
+
+Slack (MET) :             0.300ns  (arrival time - required time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntHScreen_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntHScreen_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ckVideoGen_0_ckVideo rise@0.000ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        0.405ns  (logic 0.256ns (63.171%)  route 0.149ns (36.829%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.357ns
+    Source Clock Delay      (SCD):    1.808ns
+    Clock Pessimism Removal (CPR):    0.549ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.501     1.218    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.244 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.565     1.808    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X15Y7          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y7          FDRE (Prop_fdre_C_Q)         0.141     1.949 r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[5]/Q
+                         net (fo=10, routed)          0.149     2.098    olymp_i/vgaCtrl_0/inst/adrHScreen[4]
+    SLICE_X15Y7          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     2.213 r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[8]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.213    olymp_i/vgaCtrl_0/inst/data0[5]
+    SLICE_X15Y7          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.481     0.895    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.948 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.546     1.494    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.523 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.835     2.357    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X15Y7          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[5]/C
+                         clock pessimism             -0.549     1.808    
+    SLICE_X15Y7          FDRE (Hold_fdre_C_D)         0.105     1.913    olymp_i/vgaCtrl_0/inst/cntHScreen_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -1.913    
+                         arrival time                           2.213    
+  -------------------------------------------------------------------
+                         slack                                  0.300    
+
+Slack (MET) :             0.303ns  (arrival time - required time)
+  Source:                 olymp_i/vgaCtrl_0/inst/cntHScreen_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Destination:            olymp_i/vgaCtrl_0/inst/cntHScreen_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by ckVideoGen_0_ckVideo  {rise@0.000ns fall@3.365ns period=6.731ns})
+  Path Group:             ckVideoGen_0_ckVideo
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ckVideoGen_0_ckVideo rise@0.000ns - ckVideoGen_0_ckVideo rise@0.000ns)
+  Data Path Delay:        0.408ns  (logic 0.256ns (62.821%)  route 0.152ns (37.179%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.357ns
+    Source Clock Delay      (SCD):    1.808ns
+    Clock Pessimism Removal (CPR):    0.549ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.717 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.501     1.218    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.244 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.565     1.808    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X15Y8          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y8          FDRE (Prop_fdre_C_Q)         0.141     1.949 r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[9]/Q
+                         net (fo=12, routed)          0.152     2.101    olymp_i/vgaCtrl_0/inst/cntHScreen_reg[9]_0
+    SLICE_X15Y8          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     2.216 r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[11]_i_2/O[0]
+                         net (fo=1, routed)           0.000     2.216    olymp_i/vgaCtrl_0/inst/data0[9]
+    SLICE_X15Y8          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ckVideoGen_0_ckVideo rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  ck100MHz (IN)
+                         net (fo=0)                   0.000     0.000    ck100MHz
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  ck100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.481     0.895    olymp_i/ckVideoGen_0/inst/ck100MHz
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.948 r  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+                         net (fo=1, routed)           0.546     1.494    olymp_i/ckVideoGen_0/inst/ckVideo
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.523 r  olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/O
+                         net (fo=25, routed)          0.835     2.357    olymp_i/vgaCtrl_0/inst/ckVideo
+    SLICE_X15Y8          FDRE                                         r  olymp_i/vgaCtrl_0/inst/cntHScreen_reg[9]/C
+                         clock pessimism             -0.549     1.808    
+    SLICE_X15Y8          FDRE (Hold_fdre_C_D)         0.105     1.913    olymp_i/vgaCtrl_0/inst/cntHScreen_reg[9]
+  -------------------------------------------------------------------
+                         required time                         -1.913    
+                         arrival time                           2.216    
+  -------------------------------------------------------------------
+                         slack                                  0.303    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         ckVideoGen_0_ckVideo
+Waveform(ns):       { 0.000 3.365 }
+Period(ns):         6.731
+Sources:            { olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     BUFG/I             n/a            2.155         6.731       4.576      BUFGCTRL_X0Y0   olymp_i/ckVideoGen_0/inst/ckVideo_BUFG_inst/I
+Min Period        n/a     PLLE2_ADV/CLKOUT0  n/a            1.249         6.731       5.482      PLLE2_ADV_X1Y0  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+Min Period        n/a     FDRE/C             n/a            1.000         6.731       5.731      SLICE_X14Y8     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[0]/C
+Min Period        n/a     FDRE/C             n/a            1.000         6.731       5.731      SLICE_X15Y8     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[10]/C
+Min Period        n/a     FDRE/C             n/a            1.000         6.731       5.731      SLICE_X15Y8     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[11]/C
+Min Period        n/a     FDRE/C             n/a            1.000         6.731       5.731      SLICE_X15Y6     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[1]/C
+Min Period        n/a     FDRE/C             n/a            1.000         6.731       5.731      SLICE_X15Y6     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[2]/C
+Min Period        n/a     FDRE/C             n/a            1.000         6.731       5.731      SLICE_X15Y6     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+Min Period        n/a     FDRE/C             n/a            1.000         6.731       5.731      SLICE_X15Y6     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[4]/C
+Min Period        n/a     FDRE/C             n/a            1.000         6.731       5.731      SLICE_X15Y7     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[5]/C
+Max Period        n/a     PLLE2_ADV/CLKOUT0  n/a            160.000       6.731       153.269    PLLE2_ADV_X1Y0  olymp_i/ckVideoGen_0/inst/PLLE2_BASE_inst/CLKOUT0
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X14Y8     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[0]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y8     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[10]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y8     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[11]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y6     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[1]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y6     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[2]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y6     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y6     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[4]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y7     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[5]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y7     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[6]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y7     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[7]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X14Y8     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[0]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y8     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[10]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y8     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[11]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y6     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[1]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y6     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[2]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y6     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[3]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y6     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[4]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y7     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[5]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y7     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[6]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         3.365       2.865      SLICE_X15Y7     olymp_i/vgaCtrl_0/inst/cntHScreen_reg[7]/C
+
+
+

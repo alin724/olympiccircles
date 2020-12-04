@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 21 14:34:21 2020" VIVADOVERSION="2019.2.1">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="olymp" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="ck100MHz" SIGIS="undef" SIGNAME="External_Ports_ck100MHz">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ckVideoGen_0" PORT="ck100MHz"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Hsync" SIGIS="undef" SIGNAME="vgaCtrl_0_vgaHsync">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="vgaCtrl_0" PORT="vgaHsync"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Vsync" SIGIS="undef" SIGNAME="vgaCtrl_0_vgaVsync">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="vgaCtrl_0" PORT="vgaVsync"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="vgaRed" RIGHT="0" SIGIS="undef" SIGNAME="imgCombOlymp_0_vgaRed">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="imgCombOlymp_0" PORT="vgaRed"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="vgaGreen" RIGHT="0" SIGIS="undef" SIGNAME="imgCombOlymp_0_vgaGreen">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="imgCombOlymp_0" PORT="vgaGreen"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="vgaBlue" RIGHT="0" SIGIS="undef" SIGNAME="imgCombOlymp_0_vgaBlue">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="imgCombOlymp_0" PORT="vgaBlue"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/ckVideoGen_0" HWVERSION="1.0" INSTANCE="ckVideoGen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ckVideoGen" VLNV="xilinx.com:module_ref:ckVideoGen:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="olymp_ckVideoGen_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="ck100MHz" SIGIS="undef" SIGNAME="External_Ports_ck100MHz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ck100MHz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ckVideo" SIGIS="undef" SIGNAME="ckVideoGen_0_ckVideo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="imgCombOlymp_0" PORT="ckVideo"/>
+            <CONNECTION INSTANCE="vgaCtrl_0" PORT="ckVideo"/>
+            <CONNECTION INSTANCE="ctrlImgOlymp_0" PORT="ckVideo"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ctrlImgOlymp_0" HWVERSION="1.0" INSTANCE="ctrlImgOlymp_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ctrlImgOlymp" VLNV="xilinx.com:module_ref:ctrlImgOlymp:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="olymp_ctrlImgOlymp_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="ckVideo" SIGIS="undef" SIGNAME="ckVideoGen_0_ckVideo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ckVideoGen_0" PORT="ckVideo"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="adrHScreen" RIGHT="0" SIGIS="undef" SIGNAME="vgaCtrl_0_adrHScreen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vgaCtrl_0" PORT="adrHScreen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="adrVScreen" RIGHT="0" SIGIS="undef" SIGNAME="vgaCtrl_0_adrVScreen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vgaCtrl_0" PORT="adrVScreen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="flgOlymp" RIGHT="0" SIGIS="undef" SIGNAME="ctrlImgOlymp_0_flgOlymp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="imgCombOlymp_0" PORT="flgOlymp"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/imgCombOlymp_0" HWVERSION="1.0" INSTANCE="imgCombOlymp_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="imgCombOlymp" VLNV="xilinx.com:module_ref:imgCombOlymp:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="olymp_imgCombOlymp_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="ckVideo" SIGIS="undef" SIGNAME="ckVideoGen_0_ckVideo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ckVideoGen_0" PORT="ckVideo"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="flgActiveArea" SIGIS="undef" SIGNAME="vgaCtrl_0_flgActiveArea">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vgaCtrl_0" PORT="flgActiveArea"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="flgOlymp" RIGHT="0" SIGIS="undef" SIGNAME="ctrlImgOlymp_0_flgOlymp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ctrlImgOlymp_0" PORT="flgOlymp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="vgaRed" RIGHT="0" SIGIS="undef" SIGNAME="imgCombOlymp_0_vgaRed">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="vgaRed"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="vgaGreen" RIGHT="0" SIGIS="undef" SIGNAME="imgCombOlymp_0_vgaGreen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="vgaGreen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="vgaBlue" RIGHT="0" SIGIS="undef" SIGNAME="imgCombOlymp_0_vgaBlue">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="vgaBlue"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/vgaCtrl_0" HWVERSION="1.0" INSTANCE="vgaCtrl_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="vgaCtrl" VLNV="xilinx.com:module_ref:vgaCtrl:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="olymp_vgaCtrl_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="ckVideo" SIGIS="undef" SIGNAME="ckVideoGen_0_ckVideo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ckVideoGen_0" PORT="ckVideo"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vgaHsync" SIGIS="undef" SIGNAME="vgaCtrl_0_vgaHsync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Hsync"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vgaVsync" SIGIS="undef" SIGNAME="vgaCtrl_0_vgaVsync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Vsync"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="flgActiveArea" SIGIS="undef" SIGNAME="vgaCtrl_0_flgActiveArea">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="imgCombOlymp_0" PORT="flgActiveArea"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="adrHScreen" RIGHT="0" SIGIS="undef" SIGNAME="vgaCtrl_0_adrHScreen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ctrlImgOlymp_0" PORT="adrHScreen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="adrVScreen" RIGHT="0" SIGIS="undef" SIGNAME="vgaCtrl_0_adrVScreen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ctrlImgOlymp_0" PORT="adrVScreen"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
